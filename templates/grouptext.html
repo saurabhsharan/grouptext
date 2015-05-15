@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Grouptext</title>
+    <script src="{{ url_for('static', filename='jquery-2.1.4.js') }}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename='grouptext.js') }}" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css" media="screen">
+      #numbersContainer {
+        display: none;
+      }
+      
+      .deleteLink {
+        font-size: 0.7em;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Welcome to Grouptext!</h2>
+    <select id="numbersFileSelect">
+      <option value="placeholder" selected="selected">Select a group</option>
+    </select>
+    <div id="numbersContainer">
+      <div id="numbers"></div>
+      <p>
+        <form action="#" id="addNumberForm">
+          <input type="text" name="newNumber" value="" id="newNumber">
+          <input type="submit" value="Add Number" id="addNumberSubmit">
+        </form>
+      </p>
+      <p>
+        <form action="#" id="sendMessageForm">
+          <input type="text" name="messageBody" value="" id="messageBody">
+          <input type="submit" value="Send Message" id="sendMessageSubmit">
+        </form>
+      </p>
+    </div>
+  </body>
+</html>
